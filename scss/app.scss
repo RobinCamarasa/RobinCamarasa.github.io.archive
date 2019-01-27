@@ -1,0 +1,131 @@
+$theme-colors: (
+        "dark": #ff9442,
+        "success": #ff9442,
+        "danger": #e87a77,
+        "primary": #4f86ff
+);
+
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+.navbar-brand {
+  > .active {
+    width: 1.5em;
+    color: $white;
+  }
+  > .inactive {
+    width: 1.5em;
+    color: $gray-500;
+  }
+
+}
+
+
+body {
+  background-image: url("../img/pattern.jpg");
+  background-size: 10em;
+  background-color: $gray-600;
+  overflow-y : scroll
+}
+
+p {
+  text-align: justify;
+}
+
+.container {
+  background-color: rgba(255,255,255,0.8);
+}
+
+a {
+  text-decoration: none;
+  color: #ff9442;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #4f86ff;
+}
+
+
+path {
+  fill: currentColor;
+}
+
+h1 {
+  color: theme-color("primary");
+  font-family: 'Baloo Thambi', cursive;
+  text-align: center;
+}
+
+.navbar {
+  font-family: 'Baloo Thambi', cursive;
+}
+
+
+.erreur {
+  color: #e87a77;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+
+.main_button {
+    padding: 0.5em;
+    border: 0.2em solid theme-color("success");
+    background-color: theme-color("success");
+    color: gray("100");
+    font-family: 'Baloo Thambi', cursive;
+}
+
+.main_button:hover {
+    background-color: gray("100");
+    color: theme-color("success");
+}
+
+strong {
+  font-family: 'Baloo Thambi', cursive;
+}
+
+.footer {
+  color: #ff9442;
+}
+
+.social:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.social {
+  -webkit-transform: scale(0.8);
+  /* Browser Variations: */
+
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  color: #ff9442;
+  fill: #ff9442;
+}
+
+#social-fb:hover {
+  color: #3B5998;
+}
+#social-tw:hover {
+  color: #4099FF;
+}
+#social-gh:hover {
+  color: #333;
+}
+#social-em:hover {
+  color: #f39c12;
+}

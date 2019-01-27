@@ -1,0 +1,17 @@
+{
+  "name": "github_robin_camarasa",
+  "version": "1.0.0",
+  "description": "This package corresponds to the code of the personal github.io page of Robin Camarasa",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/app.scss css/app.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RobinCamarasa",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.11.0"
+  }
+}
