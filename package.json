@@ -13,5 +13,8 @@
     "bootstrap": "^4.1.1",
     "jquery": "^3.3.1",
     "node-sass": "^4.11.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   }
 }
