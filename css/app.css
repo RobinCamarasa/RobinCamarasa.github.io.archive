@@ -6318,6 +6318,10 @@ h1 {
   font-family: 'Baloo Thambi', cursive;
   text-align: center; }
 
+h3 {
+  margin-top: 20px;
+  font-family: 'Baloo Thambi', cursive; }
+
 .navbar {
   font-family: 'Baloo Thambi', cursive; }
 
