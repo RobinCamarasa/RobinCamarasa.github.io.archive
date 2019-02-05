@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Module O6</title>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/regular.css" integrity="sha384-aubIA90W7NxJ+Ly4QHAqo1JBSwQ0jejV75iHhj59KRwVjLVHjuhS3LkDAoa/ltO4" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/brands.css" integrity="sha384-1KLgFVb/gHrlDGLFPgMbeedi6tQBLcWvyNUN+YKXbD7ZFbjX6BLpMDf0PJ32XJfX" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="shortcut icon" href="img/logo.png">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+              <i class="fas fa-code-branch" width="50"></i>
+              Module O6
+            </a>
+
+        </nav>
+        <div class="container">
+                <br>
+                <div id="app">
+                  <div class="row align-items-center">
+                    <div class="col-md-1"></div>
+                    <div class="col-12 col-md-10">
+                      <h1>Introduction</h1>
+                      <p> Le but de ce projet est la réalisation d'une version bêta d'un site internet référençant les recherches
+                        effectuées par le groupe de projet informatique dans le module O6.
+                      </p>
+                      <div v-if="selected">
+                        <h1>Profil sélectionné</h1>
+                        <strong>Nom : </strong> {{ selected_profil.nom }}
+                          <br>
+                        <strong>Prénom : </strong> {{ selected_profil.prenom }}
+                          <br>
+                          <strong>Promotion : </strong> {{ selected_profil.promotion }}
+                            <br>
+                          <strong>Contact : </strong> {{ selected_profil.contact }}
+                            <br>
+                            <strong>Témoignage : </strong> {{ selected_profil.temoignage }}
+                              <br>
+                      </div>
+                      <br>
+
+                      <h1>Profils</h1>
+                      <table class="table" style="width:100%">
+                        <thead>
+                          <th scope="col">Nom</th>
+                          <th scope="col">Prénom</th>
+                          <th scope="col">Secteur</th>
+                          <th scope="col"></th>
+                        </thead>
+                          <tr v-for="profil in profils">
+                            <td>{{ profil.nom }}</td>
+                            <td>{{ profil.prenom }}</td>
+                            <td>{{ profil.secteur }}</td>
+                            <td><button class="btn btn-small btn-dark btn-outline-dark" v-on:click="load_profil(profil)">Voir</button></td>
+                          </tr>
+                      </table>
+
+
+                            <h1>
+                                Contact
+                            </h1>
+                                Pour toute question, vous pouvez me joindre :
+                                <ul>
+                                    <li>par email : <a href="mailto:robin.camarasa@gmail.com">robin.camarasa@gmail.com</a></li>
+                                    <li>par phone : <a href="tel:+33630662972">+33 6 30 66 29 72</a></li>
+                                </ul>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+
+            <hr>
+            <footer class="text-center center-block">
+                <strong class="footer">© 2018 Copyright :</strong> Module O6
+                <br>
+                <a href="https://www.facebook.com/robin.camarasa"><i id="social-fb" class="fab fa-facebook-square social fa-3x"></i></a>
+                <a href="https://twitter.com/CamarasaRobin"><i id="social-tw" class="fab fa-twitter-square fa-3x social"></i></a>
+                <a href="https://github.com/RobinCamarasa"><i id="social-gh" class="fab fa-github-square fa-3x social"></i></a>
+                <a href="mailto:robin.camarasa@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+            </footer>
+            <br>
+        </div>
+
+        <script src="jquery/dist/jquery.js"></script>
+        <script src="bootstrap/dist/js/bootstrap.js"></script>
+        <script src="axios/dist/axios.js"></script>
+        <script src="vue/dist/vue.js"></script>
+        <script src="js/appm6.js"></script>
+
+    </body>
+</html>
